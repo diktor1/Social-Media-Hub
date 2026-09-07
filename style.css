@@ -7,7 +7,7 @@
 body{
   background-image:
     linear-gradient(rgba(0,0,0,0.5)),
-    url('gambar/body.png');
+    url('gambar/body.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -126,7 +126,7 @@ a{
   border-radius:10px;
   background-image:
     linear-gradient(rgba(0,0,0,0.1)),
-    url('gambar/body~3.jpg');
+    url('gambar/body~3.webp');
   object-fit:cover;
   overflow: hidden;
 
@@ -190,7 +190,7 @@ a span{
   color:rgba(136,0,223,1);
   font-family:'Goldman', sans-serif;
   font-weight:600;
-  font-size:25px;
+  font-size:20px;
   margin-top:20px;
 }
 footer{
