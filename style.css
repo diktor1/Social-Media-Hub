@@ -1,0 +1,207 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Goldman', sans-serif;
+}
+body{
+  background-image:
+    linear-gradient(rgba(0,0,0,0.5)),
+    url('gambar/body.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  justify-items:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:0;
+  
+}
+
+.container{
+  position:relative;
+  display:flex;
+  flex-direction:column; 
+  align-items:center;
+  justify-content:center;
+  padding:30px;
+  border:transparent;
+  background:rgba(0,0,0,0.3);
+  backdrop-filter:blur(20px);
+  border-radius:20px;
+  margin:20vw;
+} 
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  padding: 3px;
+  border-radius: 23px;
+
+  background: conic-gradient(
+    from var(--angle),
+    rgba(136,0,223,1),
+    rgba(195,0,207,1),
+    rgba(136,0,223,1)
+  );
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+
+  animation: warnaBorder 2s linear infinite;
+}
+
+@keyframes warnaBorder {
+  to {
+    --angle: 360deg;
+  }
+}
+
+.profil{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  width:100%;
+}
+.profil span{
+  color:rgba(136,0,223,1);
+  margin-top:20px;
+  font-size:30px;
+  font-weight:600;
+  font-family:'Goldman', sans-serif;
+}
+.profil p{
+  color:white;
+  font-family:'Goldman', sans-serif;
+  font-weight:400;
+  font-style:italic;
+  background:rgba(89,0,171,0.2);
+  backdrop-filter:blur(30px);
+  padding:20px 30px;
+  border-radius:10px;
+}
+.gambar img{
+  width:8rem;
+  aspect-ratio:1/1;
+  overflow:hidden;
+  object-fit:cover;
+  border:3px solid rgba(136,0,223,1);
+  border-radius:5px;
+  outline: 3px dashed rgba(195,0,207,0.8);
+  outline-offset: 10px;
+}
+.semua-sosmed{
+  display:flex;
+  margin-top:30px;
+  flex-direction:column;
+  align-items:center;
+  padding:20px;
+  gap:30px;
+  border-bottom:3px dashed rgba(89,0,171,0.5);
+}
+a{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 100px;
+  align-items:center;
+  border:2px solid rgba(136,0,223,01);
+  border-radius:10px;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.1)),
+    url('gambar/body~3.jpg');
+  object-fit:cover;
+  overflow: hidden;
+
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 15px rgba(136,0,223,0.5);
+  outline: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+a:hover{
+  transform: scale(1.05);
+  border-color: rgb(195,0,207);
+  box-shadow: 0px 5px 15px rgb(195,0,207);
+}
+a:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+a::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+a img{
+  width:2rem;
+}
+a{
+  text-decoration:none;
+}
+a span{
+  color:rgba(255, 255, 255, 0.8);
+  
+}
+.follow{
+  color:rgba(136,0,223,1);
+  font-family:'Goldman', sans-serif;
+  font-weight:600;
+  font-size:25px;
+  margin-top:20px;
+}
+footer{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-top:-15vw;
+}
+footer span{
+  color:white;
+  font-family:'Goldman', sans-serif;
+  font-weight:400;
+  font-size:10px;
+}
