@@ -101,7 +101,7 @@ body{
   aspect-ratio:1/1;
   overflow:hidden;
   object-fit:cover;
-  border:3px solid rgba(136,0,223,1);
+  border:2px solid rgba(136,0,223,1);
   border-radius:5px;
   outline-offset: 10px;
 }
